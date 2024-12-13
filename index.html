@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,35 @@
     <title>Laboratorio 2</title>
     <script>
 
+        function guardarTareas() {
+            let task = document.getElementById("tarea").value;
+            let desc = document.getElementById("desc-tarea").value;
+            let status = document.getElementById("estado").value;
+            localStorage.setItem(task, task);
+            localStorage.setItem("d"+task, desc);
+            localStorage.setItem("e"+task, status);
+        }
     </script>
 </head>
+
 <body>
     <header>
         <h1>Tareas</h1>
     </header>
     <section id="formulario">
-        <form action="">
+        <form onsubmit="guardarTareas(); return false">
             <label for="tarea">Nombre Tarea</label>
-            <input type="text" name="tarea" id="tarea" >
+            <input type="text" name="tarea" id="tarea" placeholder="Ingrese la tarea">
             <br>
             <label for="desc-tarea">Descripcion Tarea</label>
-            <input type="text" name="desc-tarea" id="desc-tarea">
-            <br>    
+            <input type="text" name="desc-tarea" id="desc-tarea" placeholder="Describa la tarea">
+            <br>
             <label for="estado">Estado tarea</label>
-            <input type="radio" name="genero" class="estado" value="activa">Activa
-            <input type="radio" name="genero" class="estado" value="inactiva">Inactiva
+            <input type="text" name="estado" id="estado" placeholder="Estado de la tarea">
+            <br>
+            <input type="submit" id="btnenv" value="Enviar">
         </form>
     </section>
 </body>
+
 </html>
