@@ -26,6 +26,15 @@
             
         }
 
+        function actualizarTarea(){
+            let task = document.getElementById("tarea").value;
+            let desc = document.getElementById("desc-tarea").value;
+            let status = document.getElementById("estado").value;
+            localStorage.setItem(task, task);
+            localStorage.setItem("d"+task, desc);
+            localStorage.setItem("e"+task, status);
+        }
+
     </script>
 </head>
 
@@ -46,7 +55,8 @@
             <br>
             <input type="submit" id="btnenv" value="Enviar">
             <input type="button" onclick="consultarTarea(); return false" id="btncons" value="Consultar">
-        </form>
+            <input type="button" onclick="actualizarTarea(); return false" id="btncons" value="Actualizar">
+         </form>
     </section>
 </body>
 
