@@ -16,6 +16,16 @@
             localStorage.setItem("d"+task, desc);
             localStorage.setItem("e"+task, status);
         }
+
+        function consultarTarea(){
+            let task = document.getElementById("tarea").value;
+            let desc = localStorage.getItem("d"+task);
+            let status = localStorage.getItem("e"+task);
+            document.getElementById("desc-tarea").value = desc;
+            document.getElementById("estado").value = status;
+            
+        }
+
     </script>
 </head>
 
@@ -35,6 +45,7 @@
             <input type="text" name="estado" id="estado" placeholder="Estado de la tarea">
             <br>
             <input type="submit" id="btnenv" value="Enviar">
+            <input type="button" onclick="consultarTarea(); return false" id="btncons" value="Consultar">
         </form>
     </section>
 </body>
