@@ -35,6 +35,13 @@
             localStorage.setItem("e"+task, status);
         }
 
+        function eliminarTarea(){
+            let task =  document.getElementById("tarea").value;
+            localStorage.removeItem(task);
+            localStorage.removeItem("d"+task);
+            localStorage.removeItem("e"+task);
+        }
+
     </script>
 </head>
 
@@ -45,17 +52,18 @@
     <section id="formulario">
         <form onsubmit="guardarTareas(); return false">
             <label for="tarea">Nombre Tarea</label>
-            <input type="text" name="tarea" id="tarea" placeholder="Ingrese la tarea">
+            <input type="text" name="tarea" class="display" id="tarea" placeholder="Ingrese la tarea">
             <br>
             <label for="desc-tarea">Descripcion Tarea</label>
-            <input type="text" name="desc-tarea" id="desc-tarea" placeholder="Describa la tarea">
+            <input type="text" name="desc-tarea" class="display" id="desc-tarea" placeholder="Describa la tarea">
             <br>
             <label for="estado">Estado tarea</label>
-            <input type="text" name="estado" id="estado" placeholder="Estado de la tarea">
+            <input type="text" name="estado" class="display" id="estado" placeholder="Estado de la tarea">
             <br>
             <input type="submit" id="btnenv" value="Enviar">
             <input type="button" onclick="consultarTarea(); return false" id="btncons" value="Consultar">
             <input type="button" onclick="actualizarTarea(); return false" id="btnactual" value="Actualizar">
+            <input type="button" onclick="eliminarTarea(); return false" id="btndel" value="Eliminar">
          </form>
     </section>
 </body>
