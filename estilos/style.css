@@ -1,0 +1,53 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: gainsboro;
+    border: 1px solid black;
+    text-align: center;
+}
+
+
+h1{
+    color: red;
+}
+
+#formulario{
+    background-color: gainsboro;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+}
+
+input{
+    margin: 5px;
+}
+
+.display{
+    display: block;
+}
+
+#btnenv{
+    border-radius: 3px;
+    background-color:#d7ff7d ;
+    font-weight: bold;
+}
+
+#btncons{
+    border-radius: 3px;
+    background-color:	#5b96fb;
+    font-weight: bold;
+}
+
+#btnactual{
+    border-radius: 3px;
+    background-color:	#8174a0;
+    font-weight: bold;
+}
+
+#btndel{
+    border-radius: 3px;
+    background-color:	#e30022;
+    font-weight: bold;
+}
